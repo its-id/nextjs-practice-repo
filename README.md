@@ -1,3 +1,9 @@
+### This repo is a hands-on based approach to learn nextjs with redux-toolkit.
+### Each component is created with proper comments to make the code understandable
+### A brief description about Redux flow and architecture can be found at `/src/app/provider/redux`
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
