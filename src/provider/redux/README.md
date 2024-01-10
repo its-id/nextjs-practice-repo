@@ -1,9 +1,9 @@
-## Redux & RTK Architecture
+<img width="631" alt="image-2" src="https://github.com/its-id/nextjs-with-rtk/assets/60315832/f7951a7c-5ef1-4fa0-bb35-bc17224b6270">## Redux & RTK Architecture
 
 > Architecture and flow for both are **almost** same.
 
 In below image, if we need to send data from `<SubArea2>` component to `<Sidebar>` component, we use **Redux Store**.
-![Alt text](image.png)
+<img width="741" alt="Screenshot 2024-01-10 at 6 11 18 PM" src="https://github.com/its-id/nextjs-with-rtk/assets/60315832/1ce7d067-210a-4552-ae05-264f8ee0620a">
 
 Looks easy, let's see the underlying architecture:
 
@@ -14,7 +14,8 @@ Looks easy, let's see the underlying architecture:
 4. Dispatcher
 
 ### Flow of data in Redux 
-![Alt text](image-1.png)
+<img width="702" alt="Screenshot 2024-01-10 at 6 11 09 PM" src="https://github.com/its-id/nextjs-with-rtk/assets/60315832/af438a91-95d7-4776-896c-b7d7a2d0c02b">
+
 
 - Data gets dispatched/sent from `view/UI`.
 - In `Action`, the data which needs to be stored/added/saved in `redux`'s store is present.
@@ -24,7 +25,7 @@ Looks easy, let's see the underlying architecture:
 
 
 ## Changes in Redux ToolKit (RTK)
-![Alt text](image-2.png)
+<img width="631" alt="image-2" src="https://github.com/its-id/nextjs-with-rtk/assets/60315832/cec0dce5-d5c5-4001-94b7-5bee2e40d4d5">
 
 Here the both `Action` and `Reducers` are merged together into a single component known as **`Slice`**.
 
