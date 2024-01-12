@@ -24,4 +24,13 @@
   border: 1px solid orange;
   margin-top: 10px;
   padding-left: 50px;
+  overflow-y: auto;
+}
+
+.user-item {
+  margin-bottom: 10px;
+  width: fit-content;
+  padding: 5px 10px;
+  background-color: skyblue;
+  border-radius: 5px;
 }

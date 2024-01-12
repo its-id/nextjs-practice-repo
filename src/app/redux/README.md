@@ -48,3 +48,6 @@ Ans. Two ways: 1. Call API and set the store data again. 2. Use redux persistanc
 Q3. Is redux's data flow bi-directional or uni-directional?
 Ans. Uni-directional - data flows only from ui -> action -> reducers -> store.
 (Bi-directional - data can go back from store to reducers to actions to back to state and vice-versa.)
+
+Q4. Can we use multiple stores in one react.js application?
+Ans. NO! only one store is allowed.
