@@ -1,12 +1,11 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import DisplayUsers from './components/DisplayUsers';
+import AddUsers from './components/AddUsers';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        
-      </div>
+    <main>
+      <AddUsers />
+      <DisplayUsers />
     </main>
-  )
+  );
 }
