@@ -13,16 +13,16 @@ const initialState = {
   users: [],
 };
 
-const Slice = createSlice({
+const Slice:any = createSlice({
   name: 'users-slice',
   initialState,
   reducers: {
     //this is one of the reducer
-    addUser: (state: any, action: any) => {
+    addUser: (state: any, action: any) => { 
       //creating the data to pushed into redux's store
       const data = {
         id: nanoid(),
-        name: action.name,
+        name: action.payload, //action contains the type and payload. 'type' is the constants we used to create in normal redux, it is handled by the rtk only here (naming convention: sliceName/reducerName)
       };
       state.users.push(data); //pushing the data to redux's store.
     },

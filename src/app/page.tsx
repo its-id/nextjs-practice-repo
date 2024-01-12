@@ -1,3 +1,5 @@
+'use client';
+
 import DisplayUsers from './components/DisplayUsers';
 import AddUsers from './components/AddUsers';
 
