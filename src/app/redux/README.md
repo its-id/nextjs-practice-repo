@@ -35,6 +35,8 @@ In simple terms,
 
 > **Imp Point:** Specific Slice can be used for specific task.
 
+To understand the flow of data and working of different actions and reducers: install redux-dev-tools
+
 ## Interview Questions
 
 Q1. Does redux's data stays after your page reloads?
