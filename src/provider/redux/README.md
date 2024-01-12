@@ -34,3 +34,14 @@ In simple terms,
 
 > **Imp Point:** Specific Slice can be used for specific task.
 
+
+
+## Interview Questions
+Q1. Does redux's data stays after your page reloads?
+Ans. No. It gets removed as we don't store it in localstorage. It gets stored as an object in the state and gets cleared just like a state.
+
+Q2. Any ways to retain the data after refresh?
+Ans. Two ways:
+     1. Call API and set the store data again.
+     2. Use redux persistance. (makes our app slow, so not recommended.)
+
