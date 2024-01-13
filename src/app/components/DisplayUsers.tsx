@@ -7,7 +7,8 @@ import { removeUser } from '../redux/slice';
 const DisplayUsers = () => {
   /*we get the users from store using useSelector hook
   we return our required state from the store inside the callback fn.*/
-  const userData = useSelector((data: any) => data.users); //'users' is the initial state stored in the slice file
+  const userData = useSelector((data: any) => data.usersData.users); //'usersData' is the renamed obj inside the store containing 'users' initial state stored in the slice file
+
   const dispatch = useDispatch();
 
   const deleteUser = (userid: string) => {
