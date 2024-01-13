@@ -51,3 +51,8 @@ Ans. Uni-directional - data flows only from ui -> action -> reducers -> store.
 
 Q4. Can we use multiple stores in one react.js application?
 Ans. NO! only one store is allowed.
+
+Q5. Can we use redux with localstorage and what is use of localstorage?
+Ans. Yes, we can use redux with localstorage.
+Localstorage is used for storing such data which always stays, even if you close/refresh the web app. 
+Usecase: to add a user info like token, username, useremail etc.
