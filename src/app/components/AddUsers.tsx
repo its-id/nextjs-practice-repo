@@ -1,6 +1,9 @@
+'use client';
+
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../redux/slice';
+import Link from 'next/link';
 
 const AddUsers = () => {
   const [name, setName] = useState('');
@@ -23,6 +26,7 @@ const AddUsers = () => {
       <button onClick={userDispatch} className='add-user-btn'>
         Add User
       </button>
+      <Link href='/remove-user'>Remove User</Link>
     </div>
   );
 };
