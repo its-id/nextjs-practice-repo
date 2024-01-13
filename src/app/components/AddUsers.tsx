@@ -26,8 +26,11 @@ const AddUsers = () => {
       <button onClick={userDispatch} className='add-user-btn'>
         Add User
       </button>
-      <Link href='/remove-user'>Remove User</Link>
-      <Link href='/todos'>Todos</Link>
+      <div className='links-container'>
+        <Link href='/remove-user'>Remove User</Link>
+        <Link href='/todos'>Todos</Link>
+        <Link href='/api-users'>API feteched Users</Link>
+      </div>
     </div>
   );
 };

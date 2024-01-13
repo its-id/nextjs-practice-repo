@@ -12,14 +12,13 @@ const DisplayUsers = () => {
   const dispatch = useDispatch();
 
   const deleteUser = (userid: string) => {
-    console.log(userid);
     dispatch(removeUser(userid));
   };
 
   return (
     <div className='display-users'>
       <h3> Users List </h3>
-      {userData.map((user: any) => (
+      {userData.length > 0 && userData.map((user: any) => (
         <div key={user.id} className='user-item'>
           <span>{user.name}</span>
           <button onClick={() => deleteUser(user.id)}>delete</button>
