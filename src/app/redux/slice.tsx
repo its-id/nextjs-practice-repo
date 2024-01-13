@@ -17,7 +17,7 @@ const Slice:any = createSlice({
   name: 'users-slice',
   initialState,
   reducers: {
-    //this is one of the reducer
+    //reducer to add the user
     addUser: (state: any, action: any) => { 
       //creating the data to pushed into redux's store
       const data = {
@@ -26,10 +26,15 @@ const Slice:any = createSlice({
       };
       state.users.push(data); //pushing the data to redux's store.
     },
+    //reducer to remove the user
+    removeUser: (state: any, action: any) => {
+      const updatedData = state.users.filter((user: any) => user.id !== action.payload)
+      state.users = updatedData;
+    }
   },
 });
 
-export const { addUser } = Slice.actions; //this action will be used by the app
+export const { addUser, removeUser } = Slice.actions; //this action will be used by the app
 //actions & reducers gets automaticaly created by the createSlice function
 
 export default Slice.reducer; //this reducer is used by the store

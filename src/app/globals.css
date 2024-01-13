@@ -30,7 +30,21 @@
 .user-item {
   margin-bottom: 10px;
   width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-item span{
   padding: 5px 10px;
   background-color: skyblue;
   border-radius: 5px;
+}
+
+.user-item button {
+  align-self: stretch;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  border: none;
 }
