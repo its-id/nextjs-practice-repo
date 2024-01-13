@@ -9,7 +9,6 @@ const RemoveUser = () => {
   const dispatch = useDispatch();
 
   const deleteUser = (userid: string) => {
-    console.log(userid);
     dispatch(removeUser(userid));
   };
 
