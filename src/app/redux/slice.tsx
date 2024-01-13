@@ -6,12 +6,20 @@ Note: both action and reducers should be of the same feature
       (will not work: action of product and reducer of auth)
 */
 
-import { createSlice, current, nanoid } from '@reduxjs/toolkit'; //nanoid: to generate unique id
+import { createAsyncThunk, createSlice, current, nanoid } from '@reduxjs/toolkit'; //nanoid: to generate unique id
 
 //when the app loads, this is the state which gets created
 const initialState = {
   users: localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users') || '') : [], //if users data is present in localstorage, then use that data, else use empty array
 };
+
+//to handle the promise from API, we use createAsyncThunk
+//first arg: name of the thunk
+//second arg: function which returns a promise
+export const fetchAPIData = createAsyncThunk('fetchUsersThunk', async () => {
+  
+})
+
 
 const Slice:any = createSlice({
   name: 'users-slice',

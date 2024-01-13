@@ -27,6 +27,7 @@ const AddUsers = () => {
         Add User
       </button>
       <Link href='/remove-user'>Remove User</Link>
+      <Link href='/todos'>Todos</Link>
     </div>
   );
 };
