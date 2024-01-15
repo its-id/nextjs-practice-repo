@@ -43,7 +43,7 @@ Q1. Does redux's data stays after your page reloads?
 Ans. No. It gets removed as we don't store it in localstorage. It gets stored as an object in the state and gets cleared just like a state.
 
 Q2. Any ways to retain the data after refresh?
-Ans. Two ways: 1. Call API and set the store data again. 2. Use redux persistance. (makes our app slow, so not recommended.)
+Ans. Two ways: 1. Call API and set the store data again. 2. Use redux persist. (makes our app slow, so not recommended.)
 
 Q3. Is redux's data flow bi-directional or uni-directional?
 Ans. Uni-directional - data flows only from ui -> action -> reducers -> store.
@@ -56,3 +56,61 @@ Q5. Can we use redux with localstorage and what is use of localstorage?
 Ans. Yes, we can use redux with localstorage.
 Localstorage is used for storing such data which always stays, even if you close/refresh the web app. 
 Usecase: to add a user info like token, username, useremail etc.
+
+Q6. Core principles of Redux?
+Ans. 1. Single source of truth - the state of your whole application is stored in an object tree within a single store.
+    2. State is read-only - we can't change the state directly. We can only change it by dispatching actions.
+    3. Changes are made with pure functions - reducers are pure functions. They don't change the state directly. They make a copy of the state and then change it.
+
+Q7. What is Redux?
+Ans. Redux is a state management library.
+     With redux, we can share data between components.
+     **Redux can use with any JS framework or library.**
+    Like: React, Angular, Vue, or core JS also
+
+Q8. Can we create 2 store in redux?
+Ans. No, we can create only one store in redux.
+
+Q9. Redux vs RTK?
+Ans. Redux is a state management library.
+    RTK is a wrapper over the redux. 
+    RTK is easy to use. 
+    RTK file structure is simpler to redux.
+
+Q10. What is useDispatch?
+Ans. Hook in redux.
+    Used for passing data from component to redux store.
+
+Q11. Difference between store and state?
+Ans. Store is an object that holds the entire state of the application.
+    State is the data that current component needs to render its UI.
+
+Q12. What is use of Provider in React Redux?
+Ans. Provider is a **component** in react-redux.
+     Makes redux store available to any component of application.
+
+Q13. Popular redux middlewares?
+Ans. Middlewares are needed when we want to do async actions in redux.
+     Redux thunk - **by default used in RTK**
+     Redux saga, Redux observable.
+
+Q14. What is a slice in redux?
+Ans. collection of reducers and actions.
+
+Q15. Where we should not use redux?
+Ans. Small and simple applications.
+     Applications without complex state management needs.
+     Applications with a different state management library.
+
+Q16. Main components (parts) of redux?
+Ans. Action, Reducer, Store, Provider.
+
+Q17. Alternative of redux?
+Ans. MobX, Recoil, Context API.
+
+Q18. How to debug redux?
+Ans. use of redux devtools extension.
+     log actions and state changes.
+     use unit tests.
+     browser debugger.
+
