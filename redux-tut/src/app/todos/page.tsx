@@ -34,10 +34,10 @@ const Todos = () => {
       </div>
       <div className='display-users'>
         <h3> Users List </h3>
-        {todosData.length > 0 && todosData.map((user: any) => (
-          <div key={user.id} className='user-item'>
-            <span>{user.name}</span>
-            <button onClick={() => deleteTodo(user.id)}>delete</button>
+        {todosData.length > 0 && todosData.map((todo: any) => (
+          <div key={todo.id} className='user-item'>
+            <span>{todo.name}</span>
+            <button onClick={() => deleteTodo(todo.id)}>delete</button>
           </div>
         ))}
       </div>
