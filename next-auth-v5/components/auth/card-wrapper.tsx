@@ -30,11 +30,10 @@ const CardWrapper = ({
       <CardHeader>
         <Header label={headerLabel} />
       </CardHeader>
-      <CardContent>{children}
-      </CardContent>
+      <CardContent>{children}</CardContent>
       {showSocial && (
         <CardFooter>
-            <Social />
+          <Social />
         </CardFooter>
       )}
       <CardFooter>
