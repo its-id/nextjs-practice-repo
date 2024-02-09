@@ -1,5 +1,4 @@
 import { Voter } from '@/types';
-// import * as data from '@/lib/data.json';
 
 import fsPromises from 'fs/promises';
 import path from 'path';

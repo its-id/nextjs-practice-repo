@@ -30,6 +30,7 @@ const UserDialog = ({ row }: any) => {
       status: voter.status,
       remarks: voter.remarks,
     });
+    window.location.reload();
   };
 
   return (

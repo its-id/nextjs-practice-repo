@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-export const ModeToggle = React.memo(() => {
+export default React.memo(function ModeToggle() {
   const { setTheme } = useTheme();
 
   return (
