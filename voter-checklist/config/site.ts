@@ -9,6 +9,7 @@ export const siteConfig: SiteConfig = {
   keywords: ['Next.js', 'React', 'Tailwind CSS', 'Radix UI', 'shadcn/ui'],
   url: {
     base: env.NEXT_PUBLIC_APP_URL,
+    backend: env.NEXT_PUBLIC_BACKEND_URL,
     author: 'https://its-ikd.vercel.app',
   },
   links: {

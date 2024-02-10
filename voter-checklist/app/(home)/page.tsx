@@ -1,5 +1,6 @@
 'use client';
 import VotersTable from '@/components/table/table';
+import { siteConfig } from '@/config/site';
 import { Voter } from '@/types';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -10,9 +11,7 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       try {
-        const { data }: any = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/`
-        );
+        const { data }: any = await axios.get(siteConfig.url.backend);
         console.log('data', data);
         setData(data.data);
       } catch (error) {

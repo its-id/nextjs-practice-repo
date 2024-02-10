@@ -9,6 +9,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
+import { siteConfig } from '@/config/site';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -25,7 +26,7 @@ const UserDialog = ({ row }: any) => {
 
   const handleSave = async () => {
     console.log('voter', voter);
-    await axios.put(`${process.env.NEXT_PUBLIC_BACKEND_URL}/${voter.id}`, {
+    await axios.put(siteConfig.url.backend + voter.id, {
       status: voter.status,
       remarks: voter.remarks,
     });
