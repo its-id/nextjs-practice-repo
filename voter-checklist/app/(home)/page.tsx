@@ -10,8 +10,11 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       try {
-        const { data }: any = await axios.get(`/api/data`);
-        setData(data);
+        const { data }: any = await axios.get(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/`
+        );
+        console.log('data', data);
+        setData(data.data);
       } catch (error) {
         console.error(error);
       }

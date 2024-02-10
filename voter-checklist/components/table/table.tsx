@@ -1,5 +1,3 @@
-'use client';
-
 import { Voter } from '@/types';
 import { columns } from './columns';
 import { DataTable } from './data-table';
