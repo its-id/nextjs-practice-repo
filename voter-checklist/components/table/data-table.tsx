@@ -72,25 +72,50 @@ export function DataTable<TData, TValue>({
           }
           className='max-w-sm'
         />
-        <Select
-          defaultValue={table.getColumn('status')?.getFilterValue() as string}
-          onValueChange={(value) =>
-            table
-              .getColumn('status')
-              ?.setFilterValue(value)
-          }
-        >
-          <SelectTrigger className='w-max'>
-            <SelectValue placeholder='Status' />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectLabel>Status</SelectLabel>
-              <SelectItem value='yes'>Voted</SelectItem>
-              <SelectItem value='no'>Not Voted</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+        <div className='flex items-center justify-between py-4 gap-2 md:gap-4'>
+          <Select
+            defaultValue={table.getColumn('status')?.getFilterValue() as string}
+            onValueChange={(value) =>
+              table.getColumn('status')?.setFilterValue(value)
+            }
+          >
+            <SelectTrigger className='w-max'>
+              <SelectValue placeholder='Status' />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>Status</SelectLabel>
+                <SelectItem value='yes'>Voted</SelectItem>
+                <SelectItem value='no'>Not Voted</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+          <Select
+            defaultValue={
+              table.getColumn('remarks')?.getFilterValue() as string
+            }
+            onValueChange={(value) =>
+              table.getColumn('remarks')?.setFilterValue(
+                value
+                  .replace(/\s+/g, ' ')
+                  .trim()
+                  .toLowerCase()
+                  .replace(/\b\w/g, (l) => l.toUpperCase())
+              )
+            }
+          >
+            <SelectTrigger className='w-max'>
+              <SelectValue placeholder='Remarks' />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>Remarks</SelectLabel>
+                <SelectItem value='self'>Self</SelectItem>
+                <SelectItem value='proxy'>Proxy</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
       <div className='rounded-md border'>
         <Table>
