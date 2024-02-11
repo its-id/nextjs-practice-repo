@@ -77,6 +77,7 @@ const UserDialog = ({ row }: any) => {
             Remarks
           </Label>
           <Input
+            disabled
             id='name'
             name='remarks'
             placeholder='Enter remarks'
@@ -88,6 +89,7 @@ const UserDialog = ({ row }: any) => {
         <div className='flex justify-center items-center gap-4'>
           <span className='w-max'>Not Voted</span>
           <Switch
+            disabled
             checked={voter?.status === 'yes'}
             className={classNames(
               voter?.status === 'yes' ? 'bg-green-500' : 'bg-rose-500',
