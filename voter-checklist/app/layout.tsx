@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from '../components/theme-provider';
 import { cn } from '@/lib/utils';
 import './globals.css';
+import CustomProvider from '@/lib/Provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,14 +25,16 @@ export default function RootLayout({
           inter.className
         )}
       >
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <CustomProvider>
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='system'
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </CustomProvider>
       </body>
     </html>
   );

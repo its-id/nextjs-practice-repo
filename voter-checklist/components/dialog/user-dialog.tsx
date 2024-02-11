@@ -9,8 +9,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
-import { siteConfig } from '@/config/site';
-import axios from 'axios';
+import { useUpdateVoterMutation } from '@/lib/features/voter/voterApiSlice';
 import { useEffect, useState } from 'react';
 
 function classNames(...classes: string[]) {
@@ -18,19 +17,22 @@ function classNames(...classes: string[]) {
 }
 
 const UserDialog = ({ row }: any) => {
+  const [updateVoter] = useUpdateVoterMutation();
   const [voter, setVoter] = useState(row.original);
 
   useEffect(() => {
     setVoter(row.original);
   }, [row]);
 
-  const handleSave = async () => {
-    console.log('voter', voter);
-    await axios.put(siteConfig.url.backend + voter.id, {
-      status: voter.status,
-      remarks: voter.remarks,
-    });
-    window.location.reload();
+  const handleSave = () => {
+    updateVoter({ id: voter.id, status: voter.status, remarks: voter.remarks })
+      .unwrap()
+      .then(() => {
+        console.log('user updated successfully!');
+      })
+      .catch(() => {
+        console.log('seeing error updating user from user-dialog');
+      });
   };
 
   return (

@@ -1,13 +1,10 @@
-'use client';
-
-import { ColumnDef } from '@tanstack/react-table';
-import { CaretSortIcon } from '@radix-ui/react-icons';
-import { Switch } from '@/components/ui/switch';
-import { Dialog, DialogTrigger } from '@/components/ui/dialog';
 import UserDialog from '@/components/dialog/user-dialog';
+import { Dialog, DialogTrigger } from '@/components/ui/dialog';
+import { Switch } from '@/components/ui/switch';
 import { Voter } from '@/types';
+import { CaretSortIcon } from '@radix-ui/react-icons';
+import { ColumnDef } from '@tanstack/react-table';
 import { Button } from '../ui/button';
-// import axios from 'axios';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -30,13 +27,6 @@ export const columns: ColumnDef<Voter>[] = [
                 className={classNames(
                   voter.status === 'yes' ? 'bg-green-500' : 'bg-rose-500'
                 )}
-                // onCheckedChange={async (checked) => {
-                //   const newStatus = checked ? 'Voted' : 'Not Voted';
-                //   await axios.put(`/api/data`, {
-                //     id: voter.id,
-                //     status: newStatus,
-                //   });
-                // }}
                 aria-readonly
               />
             </DialogTrigger>
